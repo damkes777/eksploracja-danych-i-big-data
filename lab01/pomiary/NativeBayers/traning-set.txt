@@ -1,0 +1,91 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     EDiBD lab1 - penguin_cleaned1
+Instances:    333
+Attributes:   7
+              species
+              island
+              bill_length_mm
+              bill_depth_mm
+              flipper_length_mm
+              body_mass_g
+              sex
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                        Class
+Attribute                male    female
+                        (0.5)     (0.5)
+========================================
+species
+  Adelie                  74.0      74.0
+  Gentoo                  62.0      59.0
+  Chinstrap               35.0      35.0
+  [total]                171.0     168.0
+
+island
+  Torgersen               24.0      25.0
+  Biscoe                  84.0      81.0
+  Dream                   63.0      62.0
+  [total]                171.0     168.0
+
+bill_length_mm
+  mean                 45.8535   42.0885
+  std. dev.             5.3509    4.8955
+  weight sum               168       165
+  precision             0.1698    0.1698
+
+bill_depth_mm
+  mean                 17.8917   16.4247
+  std. dev.             1.8549    1.7873
+  weight sum               168       165
+  precision             0.1077    0.1077
+
+flipper_length_mm
+  mean                204.5519  197.3886
+  std. dev.            14.5595   12.4529
+  weight sum               168       165
+  precision             1.1132    1.1132
+
+body_mass_g
+  mean               4547.5155 3862.5296
+  std. dev.           785.7021   663.912
+  weight sum               168       165
+  precision            39.1304   39.1304
+
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         241               72.3724 %
+Incorrectly Classified Instances        92               27.6276 %
+Kappa statistic                          0.4478
+Mean absolute error                      0.3097
+Root mean squared error                  0.401 
+Relative absolute error                 61.9418 %
+Root relative squared error             80.2081 %
+Total Number of Instances              333     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,690    0,242    0,744      0,690    0,716      0,449    0,849     0,867     male
+                 0,758    0,310    0,706      0,758    0,731      0,449    0,849     0,856     female
+Weighted Avg.    0,724    0,276    0,725      0,724    0,723      0,449    0,849     0,861     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 116  52 |   a = male
+  40 125 |   b = female
+

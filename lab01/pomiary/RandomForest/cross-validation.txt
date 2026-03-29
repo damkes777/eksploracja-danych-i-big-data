@@ -1,0 +1,50 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     EDiBD lab1 - penguin_cleaned1
+Instances:    333
+Attributes:   7
+              species
+              island
+              bill_length_mm
+              bill_depth_mm
+              flipper_length_mm
+              body_mass_g
+              sex
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         306               91.8919 %
+Incorrectly Classified Instances        27                8.1081 %
+Kappa statistic                          0.8378
+Mean absolute error                      0.1469
+Root mean squared error                  0.2587
+Relative absolute error                 29.386  %
+Root relative squared error             51.7369 %
+Total Number of Instances              333     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,940    0,103    0,903      0,940    0,921      0,839    0,968     0,962     male
+                 0,897    0,060    0,937      0,897    0,916      0,839    0,968     0,969     female
+Weighted Avg.    0,919    0,081    0,920      0,919    0,919      0,839    0,968     0,965     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 158  10 |   a = male
+  17 148 |   b = female
+

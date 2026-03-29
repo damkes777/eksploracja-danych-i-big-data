@@ -1,0 +1,148 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     EDiBD lab1 - penguin_cleaned1
+Instances:    333
+Attributes:   7
+              species
+              island
+              bill_length_mm
+              bill_depth_mm
+              flipper_length_mm
+              body_mass_g
+              sex
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    0.9724154976075616
+    Node 2    6.8551811286452295
+    Node 3    -7.440743308424126
+    Node 4    -5.635704946469913
+    Node 5    7.9842110204436985
+    Node 6    -3.3935030772693295
+    Node 7    5.902226349809448
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.9721608199545554
+    Node 2    -6.854098065550614
+    Node 3    7.4402980788214395
+    Node 4    5.634950588635663
+    Node 5    -7.983415321952792
+    Node 6    3.3928555871643566
+    Node 7    -5.9017511128330185
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -1.829314470201363
+    Attrib species=Adelie    1.1936543352119402
+    Attrib species=Gentoo    1.575740051572455
+    Attrib species=Chinstrap    -0.9513885256785932
+    Attrib island=Torgersen    0.7754729233930852
+    Attrib island=Biscoe    0.23595991767766364
+    Attrib island=Dream    0.814948857192629
+    Attrib bill_length_mm    -3.7616993365891105
+    Attrib bill_depth_mm    14.227050404177248
+    Attrib flipper_length_mm    10.145395750903594
+    Attrib body_mass_g    11.549603786272417
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -3.1079183598306064
+    Attrib species=Adelie    -0.7766189144772938
+    Attrib species=Gentoo    -0.38241872190373943
+    Attrib species=Chinstrap    4.2562571663837225
+    Attrib island=Torgersen    2.6997592824457124
+    Attrib island=Biscoe    1.2242869550294
+    Attrib island=Dream    -0.7575471635605106
+    Attrib bill_length_mm    -8.956956703947338
+    Attrib bill_depth_mm    -11.895022292285466
+    Attrib flipper_length_mm    2.9087815938291435
+    Attrib body_mass_g    -14.896026383160153
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -2.4396480421382964
+    Attrib species=Adelie    -2.378381833858005
+    Attrib species=Gentoo    -0.3831497720505744
+    Attrib species=Chinstrap    5.17595656361005
+    Attrib island=Torgersen    0.7152037184959819
+    Attrib island=Biscoe    0.20700678112998078
+    Attrib island=Dream    1.475610869860015
+    Attrib bill_length_mm    -16.13148099192977
+    Attrib bill_depth_mm    -0.06665190971753064
+    Attrib flipper_length_mm    5.106042785349301
+    Attrib body_mass_g    -9.622682552518171
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.8313077796872307
+    Attrib species=Adelie    1.5000343661946334
+    Attrib species=Gentoo    -1.5268649940746382
+    Attrib species=Chinstrap    0.7822426278966181
+    Attrib island=Torgersen    1.155892675088579
+    Attrib island=Biscoe    1.6603290590200612
+    Attrib island=Dream    -1.9847109582071762
+    Attrib bill_length_mm    14.542096930682913
+    Attrib bill_depth_mm    10.81931135565622
+    Attrib flipper_length_mm    -0.19705848616811256
+    Attrib body_mass_g    -0.08050320548737736
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.10304575341207416
+    Attrib species=Adelie    -1.1886097377789342
+    Attrib species=Gentoo    0.2129798054507424
+    Attrib species=Chinstrap    1.0030395873624383
+    Attrib island=Torgersen    2.1311978929175597
+    Attrib island=Biscoe    -0.6862483286447115
+    Attrib island=Dream    -1.2810504740236575
+    Attrib bill_length_mm    -0.12511173538958203
+    Attrib bill_depth_mm    -5.611133095611817
+    Attrib flipper_length_mm    2.1682760279539224
+    Attrib body_mass_g    -2.8832839303797875
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    0.265289194939118
+    Attrib species=Adelie    5.257994815578346
+    Attrib species=Gentoo    -3.676161319658047
+    Attrib species=Chinstrap    -1.785087230431825
+    Attrib island=Torgersen    1.5172626471160002
+    Attrib island=Biscoe    -1.696510234990279
+    Attrib island=Dream    -0.0983222689934526
+    Attrib bill_length_mm    5.934709177185309
+    Attrib bill_depth_mm    -6.2168946690059075
+    Attrib flipper_length_mm    -2.061269110583028
+    Attrib body_mass_g    12.688116753827758
+Class male
+    Input
+    Node 0
+Class female
+    Input
+    Node 1
+
+
+Time taken to build model: 0.17 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         303               90.991  %
+Incorrectly Classified Instances        30                9.009  %
+Kappa statistic                          0.8198
+Mean absolute error                      0.1054
+Root mean squared error                  0.2693
+Relative absolute error                 21.0785 %
+Root relative squared error             53.8587 %
+Total Number of Instances              333     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,911    0,091    0,911      0,911    0,911      0,820    0,969     0,971     male
+                 0,909    0,089    0,909      0,909    0,909      0,820    0,969     0,970     female
+Weighted Avg.    0,910    0,090    0,910      0,910    0,910      0,820    0,969     0,971     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 153  15 |   a = male
+  15 150 |   b = female
+

@@ -1,0 +1,81 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     EDiBD lab1 - penguin_cleaned1
+Instances:    333
+Attributes:   7
+              species
+              island
+              bill_length_mm
+              bill_depth_mm
+              flipper_length_mm
+              body_mass_g
+              sex
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+body_mass_g <= 3700
+|   bill_depth_mm <= 18.5: female (83.0/2.0)
+|   bill_depth_mm > 18.5
+|   |   bill_length_mm <= 38.9: female (11.0/2.0)
+|   |   bill_length_mm > 38.9
+|   |   |   species = Adelie: male (9.0)
+|   |   |   species = Gentoo: male (0.0)
+|   |   |   species = Chinstrap
+|   |   |   |   bill_length_mm <= 47.8: female (3.0)
+|   |   |   |   bill_length_mm > 47.8: male (7.0)
+body_mass_g > 3700
+|   bill_depth_mm <= 14.8
+|   |   body_mass_g <= 5250: female (51.0)
+|   |   body_mass_g > 5250: male (5.0)
+|   bill_depth_mm > 14.8
+|   |   body_mass_g <= 5000
+|   |   |   bill_depth_mm <= 17.9
+|   |   |   |   species = Adelie
+|   |   |   |   |   bill_length_mm <= 39.6: female (5.0/1.0)
+|   |   |   |   |   bill_length_mm > 39.6: male (4.0)
+|   |   |   |   species = Gentoo
+|   |   |   |   |   flipper_length_mm <= 219
+|   |   |   |   |   |   bill_length_mm <= 48.8: female (6.0)
+|   |   |   |   |   |   bill_length_mm > 48.8: male (3.0/1.0)
+|   |   |   |   |   flipper_length_mm > 219: male (3.0)
+|   |   |   |   species = Chinstrap: female (3.0)
+|   |   |   bill_depth_mm > 17.9: male (89.0/7.0)
+|   |   body_mass_g > 5000: male (51.0)
+
+Number of Leaves  : 	16
+
+Size of the tree : 	29
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         292               87.6877 %
+Incorrectly Classified Instances        41               12.3123 %
+Kappa statistic                          0.7536
+Mean absolute error                      0.1439
+Root mean squared error                  0.33  
+Relative absolute error                 28.7754 %
+Root relative squared error             66      %
+Total Number of Instances              333     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,899    0,145    0,863      0,899    0,880      0,754    0,904     0,871     male
+                 0,855    0,101    0,892      0,855    0,873      0,754    0,904     0,891     female
+Weighted Avg.    0,877    0,124    0,877      0,877    0,877      0,754    0,904     0,881     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 151  17 |   a = male
+  24 141 |   b = female
+
